@@ -17,7 +17,8 @@ int sysconf::log_buffer_mb = 512;
 int sysconf::log_segment_mb = 8192;
 std::string sysconf::log_dir("");
 int sysconf::null_log_device = 0;
-int sysconf::htt_is_on= 1;
+//int sysconf::htt_is_on= 1; //hyperthreading
+int sysconf::htt_is_on= 0; //hyperthreading
 uint64_t sysconf::node_memory_gb = 12;
 int sysconf::recovery_warm_up_policy = sysconf::WARM_UP_NONE;
 sm_log_recover_impl *sysconf::recover_functor = nullptr;

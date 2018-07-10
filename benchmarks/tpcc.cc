@@ -232,7 +232,14 @@ static double g_wh_spread = 0;
 // 5: StockLevel
 // 6: TPC-CH query 2 variant - original query 2, but /w marginal stock table update
 // 7: Microbenchmark-random - same as Microbenchmark, but uses random read-set range
+//standard mix
 static unsigned g_txn_workload_mix[] = { 45, 43, 0, 4, 4, 4, 0, 0 }; // default TPC-C workload mix
+//TPC-C-NP 50% PAYMENT
+//static unsigned g_txn_workload_mix[] = { 50, 50, 0, 0, 0, 0, 0, 0 };
+//TPC-C-NP 100% PAYMENT
+//static unsigned g_txn_workload_mix[] = { 0, 100, 0, 0, 0, 0, 0, 0 };
+//TPC-C-NP 0% PAYMENT
+//static unsigned g_txn_workload_mix[] = { 100, 0, 0, 0, 0, 0, 0, 0 };
 
 static aligned_padded_elem<spinlock> *g_partition_locks = nullptr;
 static aligned_padded_elem<atomic<uint64_t>> *g_district_ids = nullptr;
